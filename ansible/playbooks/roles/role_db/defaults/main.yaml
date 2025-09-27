@@ -1,0 +1,15 @@
+---
+# MariaDB configuration defaults
+mariadb_root_password: "rootpassword"
+db_user: "{{ db_name }}_user"
+db_password: "dbpassword"
+db_host: "localhost"
+
+# MariaDB service configuration
+mariadb_bind_address: "0.0.0.0"
+mariadb_port: 3306
+
+# Security settings
+mariadb_remove_anonymous_users: true
+mariadb_remove_test_database: true
+mariadb_disallow_root_login_remotely: false
