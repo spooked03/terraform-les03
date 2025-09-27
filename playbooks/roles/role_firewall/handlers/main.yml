@@ -1,0 +1,8 @@
+---
+# handlers file for role_firewall
+
+- name: restart ufw
+  service:
+    name: ufw
+    state: restarted
+  become: yes

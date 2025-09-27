@@ -1,0 +1,30 @@
+---
+# tasks file for role_firewall
+
+- name: Install UFW
+  package:
+    name: ufw
+    state: present
+  become: yes
+
+- name: Enable UFW
+  ufw:
+    state: enabled
+    policy: deny
+    direction: incoming
+  become: yes
+  notify: restart ufw
+
+- name: Allow SSH
+  ufw:
+    rule: allow
+    port: '22'
+    proto: tcp
+  become: yes
+
+- name: Allow port 8080
+  ufw:
+    rule: allow
+    port: '8080'
+    proto: tcp
+  become: yes
