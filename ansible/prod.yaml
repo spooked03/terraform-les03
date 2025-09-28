@@ -7,4 +7,6 @@
 - hosts: db
   become: yes
   roles:
-    - role_db
+    - role: spooked03.ansible-role-db
+      vars:
+        db_name: "{{ hostvars[inventory_hostname]['db_name'] }}"
