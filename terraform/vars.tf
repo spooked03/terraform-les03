@@ -86,12 +86,6 @@ variable "ovf_source" {
   type        = string
   default     = "https://cloud-images.ubuntu.com/releases/24.04/release/ubuntu-24.04-server-cloudimg-amd64.ova"
 }
-variable "vm_network" {
-  description = "Virtual network for the VM"
-  type        = string
-  default     = "VM Network"
-  
-}
 
 variable "userdata_file" {
   description = "Path to the cloud-init user data file"
