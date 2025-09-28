@@ -1,6 +1,0 @@
-# handlers file for role_web
-- name: Restart Nginx
-  systemd:
-    name: nginx
-    state: restarted
-    enabled: yes
