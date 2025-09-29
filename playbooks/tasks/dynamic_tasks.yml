@@ -1,0 +1,5 @@
+---
+# Dynamic task - included at runtime
+- name: "Dynamic task - parsed when task is reached"
+  debug:
+    msg: "include_tasks: Evaluated during execution, can use {{ ansible_date_time.epoch }}"

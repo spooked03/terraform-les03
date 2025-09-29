@@ -1,0 +1,5 @@
+---
+# Static task - imported at parse time
+- name: "Static task - parsed when running playbook"
+  debug:
+    msg: "import_tasks: Evaluated when playbook is parsed"

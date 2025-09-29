@@ -1,5 +1,12 @@
 ---
 - hosts: all
   become: yes
+  tasks:
+    # import_tasks: Static inclusion (parse time)
+    - import_tasks: tasks/static_tasks.yml
+    
+    # include_tasks: Dynamic inclusion (runtime)
+    - include_tasks: tasks/dynamic_tasks.yml
+
   roles:
     - role_firewall
